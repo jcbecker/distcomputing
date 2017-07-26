@@ -13,7 +13,7 @@ flagClosedWindos = False
 
 
 def initGame():
-    myScreen = pygame.display.set_mode((1280, 720))
+    myScreen = pygame.display.set_mode((128*6, 72*6))
     pygame.display.set_caption("PytronTF")
     runGameFlag = True
     
@@ -37,10 +37,19 @@ def initGame():
                     myGlobalList.append('l')
 
                 if event.key == pygame.K_RIGHT:
-                    myGlobalList.append('d')
+                    myGlobalList.append('r')
                 
                 if event.key == pygame.K_w:
-                    myGlobalList.append('w')
+                    myGlobalList.append('u')
+                    
+                if event.key == pygame.K_s:
+                    myGlobalList.append('d')
+                    
+                if event.key == pygame.K_a:
+                    myGlobalList.append('l')
+                
+                if event.key == pygame.K_d:
+                    myGlobalList.append('r')
                     
                     
                     
@@ -49,7 +58,6 @@ def initGame():
         
     pygame.display.quit()
     pygame.quit()
-    print('kasjdnakjsdnakjdnakjdn')
     global flagClosedWindos
     flagClosedWindos = True
     
@@ -156,4 +164,4 @@ t_gameWind.start()
 t_show.start()
 
 
-run(host = '192.168.0.2', port = port_)
+run(host = '172.20.84.113', port = port_)
